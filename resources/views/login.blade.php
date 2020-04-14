@@ -4,7 +4,7 @@
 	<title>Login</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	
+	<meta name="csrf-token" content="{{ csrf_token() }}">
 	<link rel="shortcut icon" href="/home/img/favicon.ico" type="image/x-icon">
 
 	<link rel="stylesheet" type="text/css" href="/home/new/login/vendor/bootstrap/css/bootstrap.min.css">
@@ -19,6 +19,7 @@
 
 	<link rel="stylesheet" type="text/css" href="/home/new/login/css/util.css">
     <link rel="stylesheet" type="text/css" href="/home/new/login/css/main.css">
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet"/>
     <style>
         @media(max-width: 3000px){
             .container-login100{
@@ -64,7 +65,7 @@
 					<img src="/home/new/login/images/img-01.png" alt="IMG">
 				</div>
 
-				<form class="login100-form validate-form">
+				<form class="login100-form validate-form" id="login_form">
 					<span class="login100-form-title">
 						Member Login
 					</span>
@@ -78,7 +79,7 @@
 					</div>
 
 					<div class="wrap-input100 validate-input" data-validate = "Password is required">
-						<input class="input100" type="password" name="pass" placeholder="Password">
+						<input class="input100" type="password" name="password" placeholder="Password">
 						<span class="focus-input100"></span>
 						<span class="symbol-input100">
 							<i class="fa fa-lock" aria-hidden="true"></i>
@@ -86,7 +87,7 @@
 					</div>
 					
 					<div class="container-login100-form-btn">
-						<button class="login100-form-btn">
+						<button class="login100-form-btn" type="submit">
 							Login
 						</button>
 					</div>
@@ -101,7 +102,7 @@
 					</div>
 
 					<div class="text-center p-t-136">
-						<a class="txt2" href="/home/new/login/#">
+						<a class="txt2" href="/register">
 							Create your Account
 							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
 						</a>
@@ -123,13 +124,48 @@
 	<script src="/home/new/login/vendor/select2/select2.min.js"></script>
 
 	<script src="/home/new/login/vendor/tilt/tilt.jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js"></script>
 	<script >
 		$('.js-tilt').tilt({
 			scale: 1.1
 		})
 	</script>
+	<script>
+		$("#login_form").submit(function(event){
+			event.preventDefault();
+			var fs = new FormData(document.getElementById("login_form"));
+			$.ajax({
+				url : "/login",
+				type : "post",
+				data : fs,
+				headers: {
+					'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
+				},
+				processData : false,
+				contentType : false,
+				success : function(res){
+					if(res == "success"){
 
-	<script src="/home/new/login/js/main.js"></script>
-
+					}
+					else{
+						toastr.options = {
+							closeButton: !0,
+							progressBar: !0,
+							showMethod: "slideDown",
+							timeOut: 6e3
+						}, toastr.error("", "Fail to login").css(({
+							width: "500px",
+							"max-width": "500px"
+						}));
+					}
+				},
+				// error : function(res){
+				// 	document.location.reload();	
+				// }
+			})
+		})
+	</script>
+	<!-- <script src="/home/new/login/js/main.js"></script> -->
+	
 </body>
 </html>
