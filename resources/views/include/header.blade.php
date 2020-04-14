@@ -66,6 +66,7 @@
 						<a href="/" class="open_close" id="close_in"><i class="icon_close"></i></a>
 						<ul>
 							<li><a href="/">Home</a></li>
+							<li><a href="/contact">Conact US</a></li>
 							<li><a href="/login">Login</a></li>
 						</ul>
 					</div>

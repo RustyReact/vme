@@ -17,4 +17,9 @@ Route::get('/', function () {
 Route::get('/login', function () {
     return view('login');
 });
+
 Route::post("/login","MainController@login");
+
+Route::get('/contact',function(){
+    return view("contact");
+});

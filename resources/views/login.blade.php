@@ -55,7 +55,7 @@
                 <div class="col-xs-9">
                     <div class="menu">
                         <a class="active" href="/">Home</a>
-                        <a href="#news">News</a>
+                        <a href="/contact">Contact US</a>
                     </div>
                 </div>
             </div>
