@@ -159,9 +159,9 @@
 						}));
 					}
 				},
-				error : function(res){
-					document.location.reload();	
-				}
+				// error : function(res){
+				// 	document.location.reload();	
+				// }
 			})
 		})
 	</script>
