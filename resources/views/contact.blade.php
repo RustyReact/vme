@@ -8,7 +8,7 @@
 	<section class="parallax_window_in" data-parallax="scroll" data-image-src="/home/new/5.jpg" data-natural-width="1400" data-natural-height="470">
 		<div id="sub_content_in">
 			<h1>Contact us</h1>
-			<p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p>
+			<!-- <p>"Usu habeo equidem sanctus no ex melius labitur conceptam eos"</p> -->
 		</div>
 	</section>
 	<!-- End section -->
