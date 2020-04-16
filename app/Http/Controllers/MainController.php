@@ -33,4 +33,29 @@ class MainController extends BaseController
             return "fail";
         }
     }
+    public function register(Request $request){
+        if (!empty($_SERVER['HTTP_CLIENT_IP'])) {   //check ip from share internet
+            $ip = $_SERVER['HTTP_CLIENT_IP'];
+        } elseif (!empty($_SERVER['HTTP_X_FORWARDED_FOR'])) {   //to check ip is pass from proxy
+            $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+        } else {
+            $ip = $_SERVER['REMOTE_ADDR'];
+        }
+        $user = DB::table("tbl_user")
+            ->where('email',"=", $request['email'])
+            ->get()->first();
+        if(isset($user->email) && $user->email != ""){
+            return "fail";
+        }
+        else{
+            DB::table("tbl_user")
+                ->insert([
+                    "email" => $request["email"],
+                    "name" => $request["name"],
+                    "password" => $request["password"],
+                    "ip" => $ip,
+                ]);
+            return "success";
+        }
+    }
 }

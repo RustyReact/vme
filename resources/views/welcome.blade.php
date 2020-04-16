@@ -10,9 +10,9 @@
 		<div id="hero_video">
 			<div id="sub_content">
 				<div class="mobile_fix">
-					<h1>Fitness <strong>Videos</strong> Workout</h1>
+					<h1>In this together<br> <strong>Keeping you securely</strong></h1>
 					<p>
-						Fall in love with Fitness
+					connected wherever you are.
 					</p>
 				</div>
 			</div>
@@ -32,27 +32,27 @@
 
 	<section id="feat">
 		<div class="container">
-			<h2 class="main_title"><em></em>How Lovefit works<span>Fall in love with Fitness</span></h2>
-			<p class="lead styled">
+			<h2 class="main_title"><em></em>One Consistent <span>Enterprise Experience.</span></h2>
+			<!-- <p class="lead styled">
 				Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos.
-			</p>
+			</p> -->
 			<div class="row">
 				<div class="col-sm-4 wow fadeIn animated" data-wow-delay="0.2s">
 					<div class="box_feat" id="icon_2">
-						<h3>Videos Workout</h3>
-						<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos. </p>
+						<h3>Meetings</h3>
+						<p>Online Meetings, Training & Technical Support</p>
 					</div>
 				</div>
 				<div class="col-sm-4 wow fadeIn animated" data-wow-delay="0.5s">
 					<div class="box_feat" id="icon_1">
-						<h3>Expert Trainers</h3>
-						<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos. </p>
+						<h3>Video Webinar</h3>
+						<p>Marketing Events & Town Hall Meetings</p>
 					</div>
 				</div>
 				<div class="col-sm-4 wow fadeIn animated" data-wow-delay="1s">
 					<div class="box_feat" id="icon_3">
-						<h3>Play Everywhere</h3>
-						<p>Usu habeo equidem sanctus no. Suas summo id sed, erat erant oporteat cu pri. In eum omnes molestie. Sed ad debet scaevola, ne mel lorem legendos. </p>
+						<h3>Conference Rooms</h3>
+						<p>Build Collaboration-Enabled Conference Rooms</p>
 					</div>
 				</div>
 			</div>
@@ -64,7 +64,7 @@
 
 	<div class="container_styled_1">
 		<div class="container margin_60_35">
-			<h2 class="main_title"><em></em>Our Customers Love Us<span>Fall in love with Fitness</span></h2>
+			<h2 class="main_title"><em></em>Our Customers Love Us<span></span></h2>
 			<div class="row" id="content_dis">
 				<div class="col-md-4" data-tag="Yoga">
 					<div class="course_container">
@@ -113,7 +113,7 @@
 						</div>
 						<figure>
 							<a href="fitness-course-1.html">
-                                <img src="/home/new/4.jpg" width="800" height="533" class="img-responsive" alt="Image">
+                                <img src="/home/new/5.jpg" width="800" height="533" class="img-responsive" alt="Image">
 								<div class="short_info"><i class="icon-clock-1"></i>2 hr 56 min</div>
 							</a>
 						</figure>
@@ -182,10 +182,11 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-6">
-					<h3>Available on all Devices</h3>
-					<p class="lead">Lorem ipsum dolor sit amet, dolore deleniti appareat per no. In ius aliquam suavitate repudiare, pro an quidam inimicus, duo liber labitur repudiandae in.</p>
+					<h3>Connect to your favorite Contact Center</h3>
+					<p class="lead">With native out-of-the-box integration to Contact Center as a Service (CCaaS) solution providers Five9 and Twilio, integrating your preferred customer experience platform to the Zoom cloud has never been easier.</p>
 					<p>
-						<p>Lorem ipsum dolor sit amet, dolore deleniti appareat per no. In ius aliquam suavitate repudiare, pro an quidam inimicus, duo liber labitur repudiandae in. Nec no tamquam delenit, sit equidem ornatus accommodare at, pro graeco debitis deterruisset no. Eam at veri oratio principes, sit ad vero ipsum affert.</p>
+						<p>Calls between the Zoom cloud and contact center partners are directly routed over private network peering connections for improved QoS</p>
+						<p>Efficiently route calls from Zoom Phone auto attendants, call queues, and Zoom Phone users to Five9 and Twilio Flex campaigns and queues</p>
 						<div id="compatib">
 							Compatible with Android/IOS
 						</div>
