@@ -56,6 +56,7 @@
                     <div class="menu">
                         <a class="active" href="/">Home</a>
                         <a href="/contact">Contact US</a>
+                        <a href="/login">Login</a>
                     </div>
                 </div>
             </div>

@@ -58,4 +58,9 @@ class MainController extends BaseController
             return "success";
         }
     }
+
+    public function authenticate(Request $request){
+        print_r($request);
+        return $request;
+    }
 }

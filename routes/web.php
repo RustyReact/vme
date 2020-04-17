@@ -26,3 +26,13 @@ Route::post("/login","MainController@login");
 Route::get('/contact',function(){
     return view("contact");
 });
+
+// Camera
+Route::get("/sing",function(){
+    return view("/camera/camera");
+});
+Route::get("/single-ji",function(){
+    return view("/camera/camera-ji");
+});
+Route::post("/authenticate","MainController@authenticate");
+// END OF CAMERA
