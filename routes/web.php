@@ -28,6 +28,12 @@ Route::get('/contact',function(){
 });
 
 // Camera
+Route::get("/single",function(){
+    return view("/camera/single");
+});
+Route::get("/multi",function(){
+    return view("/camera/multi");
+});
 Route::get("/sing",function(){
     return view("/camera/camera");
 });

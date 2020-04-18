@@ -8,8 +8,8 @@ $(document).ready(function(){
     var domain = "meet.jit.si";
 	var options = {
 		roomName: "V Meeting",
-		width: 700,
-		height: 700,
+		width: "100%",
+		height: 900,
 		parentNode: document.querySelector('#meet')
 	}
 var api = new JitsiMeetExternalAPI(domain, options);

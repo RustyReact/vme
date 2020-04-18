@@ -67,6 +67,7 @@
 						<ul>
 							<li><a href="/">Home</a></li>
 							<li><a href="/contact">Contact US</a></li>
+							<li><a href="/single">One</a></li>
 							<li><a href="/login">Login</a></li>
 						</ul>
 					</div>
