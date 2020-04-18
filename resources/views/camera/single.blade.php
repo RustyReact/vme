@@ -43,7 +43,7 @@
     $(document).ready(function(){
         var domain = "meet.jit.si";
         var options = {
-            roomName: "V Meeting",
+            roomName: "Room - 1",
             width: "100%",
             height: 800,
             parentNode: document.querySelector('#meet'),
@@ -54,9 +54,20 @@
             // },
         }
         var api = new JitsiMeetExternalAPI(domain, options);
-        api.getAvailableDevices().then(devices => {
-            console.log(devices);
-        })
+        api.executeCommand('displayName', 'Happy');
+        api.executeCommand('subject', 'Instant Video Session');
+        // api.executeCommand('toggleChat');
+
+        //api.addListener('readyToClose', () => {console.log('call hung up fron add Listener Event');});
+        // api.addEventListener('readyToClose',  function(){
+        //                                         console.log('call hung up fron add Event Listener Event');
+        //                                         alert('call hung up fron add Event Listener Event');
+        //                                         });
+        //api.on('readyToClose', () => {console.log('call hung up fron ON event');});
+        // isJitsiVideo = true;
+        // api.executeCommand('toggleChat');
+        // console.log(document.getElementById("jitsiConferenceFrame0").contentWindow.document.getElementsByClassName("leftwatermark"));
+        // console.log(document.getElementById("jitsiConferenceFrame0").contentDocument);
     });
 </script>
 
