@@ -1,9 +1,7 @@
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-	RewriteCond %{REQUEST_FILENAME} !-f
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^yourdomain.com
+RewriteRule (.*) http://www.yourdomain.com/$1 [R=301,L]
 
-    RewriteRule ^(.*)$ public/$1 [L]
-</IfModule>
-<IfModule mod_headers.c>
-   Header set Access-Control-Allow-Origin "*"
-</IfModule>
+RewriteCond %{HTTP_HOST} ^www\.yourdomain\.com$
+RewriteCond %{REQUEST_URI} !^/WebProjectFolder/
+RewriteRule (.*) /WebProjectFolder/$1

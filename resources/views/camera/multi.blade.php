@@ -37,7 +37,7 @@
 <!--/#app -->
 <script src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyC3YkZNNySdyR87o83QEHWglHfHD_PZqiw&libraries=places"></script>
 <script src="/video/assets/js/app.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://meet.jit.si/external_api.js"></script>
 <script>
     $(document).ready(function(){
@@ -64,7 +64,7 @@
         var api = new JitsiMeetExternalAPI(domain, options2);
         var api = new JitsiMeetExternalAPI(domain, options3);
     });
-</script>
+</script> -->
 
 </body>
 </html>

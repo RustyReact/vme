@@ -35,9 +35,9 @@
 </main><!--@Page Content-->
 </div><!--@#app-->
 <!--/#app -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?&key=AIzaSyC3YkZNNySdyR87o83QEHWglHfHD_PZqiw&libraries=places"></script>
 <script src="/video/assets/js/app.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="https://meet.jit.si/external_api.js"></script>
 <script>
     $(document).ready(function(){
@@ -54,8 +54,8 @@
             // },
         }
         var api = new JitsiMeetExternalAPI(domain, options);
-        api.executeCommand('displayName', 'Happy');
-        api.executeCommand('subject', 'Instant Video Session');
+        api.executeCommand('displayName', 'Local - User');
+        api.executeCommand('subject', 'Local');
         // api.executeCommand('toggleChat');
 
         //api.addListener('readyToClose', () => {console.log('call hung up fron add Listener Event');});
