@@ -54,7 +54,7 @@
             // },
         }
         var api = new JitsiMeetExternalAPI(domain, options);
-        api.executeCommand('displayName', 'Local - User');
+        api.executeCommand('displayName', 'Happy');
         api.executeCommand('subject', 'Local');
         // api.executeCommand('toggleChat');
 
