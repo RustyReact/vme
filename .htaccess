@@ -1,4 +1,7 @@
 RewriteEngine On
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php/$1 [L]
+RewriteCond %{HTTP_HOST} ^yourdomain.com
+RewriteRule (.*) http://www.yourdomain.com/$1 [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^www\.yourdomain\.com$
+RewriteCond %{REQUEST_URI} !^/WebProjectFolder/
+RewriteRule (.*) /WebProjectFolder/$1
