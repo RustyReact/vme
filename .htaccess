@@ -1,7 +1,9 @@
-RewriteEngine On
-RewriteCond %{HTTP_HOST} ^yourdomain.com
-RewriteRule (.*) http://www.yourdomain.com/$1 [R=301,L]
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+	RewriteCond %{REQUEST_FILENAME} !-f
 
-RewriteCond %{HTTP_HOST} ^www\.yourdomain\.com$
-RewriteCond %{REQUEST_URI} !^/vme/
-RewriteRule (.*) /vme/$1
+    RewriteRule ^(.*)$ public/$1 [L]
+</IfModule>
+<IfModule mod_headers.c>
+   Header set Access-Control-Allow-Origin "*"
+</IfModule>
