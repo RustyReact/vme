@@ -15,7 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('/login', function () {
-    return view('login');
+    if(Session::has("u_token")){
+        return redirect()->route("dash");
+    }
+    else{
+        return view('login');
+    }
 });
 Route::get('/register', function () {
     return view('register');
@@ -23,16 +28,46 @@ Route::get('/register', function () {
 Route::post("/register","MainController@register");
 Route::post("/login","MainController@login");
 
+// Admin
+Route::get("/dash",function(){
+    if(Session::has("u_token")){
+        $data = array();
+        $data["page_name"] = "Dashboard";
+        return view("admin/dash",$data);
+    }
+    else{
+        return view("login");
+    }
+})->name("dash");
+// END OF ADMIN
+
+
 Route::get('/contact',function(){
     return view("contact");
 });
 
 // Camera
 Route::get("/single",function(){
-    return view("/camera/single");
+    if(Session::has("u_token")){
+        $data = array();
+        $data["page_name"] = "Single Room";
+        return view("admin/single",$data);
+    }
+    else{
+        return view("login");
+    }
+    // return view("/camera/single");
 });
 Route::get("/multi",function(){
-    return view("/camera/multi");
+    if(Session::has("u_token")){
+        $data = array();
+        $data["page_name"] = "Multi Room";
+        return view("admin/single",$data);
+    }
+    else{
+        return view("login");
+    }
+    // return view("/camera/multi");
 });
 Route::get("/sing",function(){
     return view("/camera/camera");

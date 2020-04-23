@@ -5,8 +5,8 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="LOVEFIT - Video Fitness Workout">
-	<meta name="author" content="Ansonika">
+	<meta name="description" content="Video Meeting">
+	<meta name="author" content="V M">
 	<title>Video Meeting</title>
 
 	<!-- Favicons-->
@@ -67,7 +67,7 @@
 						<ul>
 							<li><a href="/">Home</a></li>
 							<li><a href="/contact">Contact US</a></li>
-							<li><a href="/single">One</a></li>
+							<!-- <li><a href="/single">One</a></li> -->
 							<li><a href="/login">Login</a></li>
 						</ul>
 					</div>

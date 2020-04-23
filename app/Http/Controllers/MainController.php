@@ -27,7 +27,11 @@ class MainController extends BaseController
             ->where('password', "=", $request['password'])
             ->get()->first();
         if(isset($user->email) && $user->email != ""){
-
+            session(["user_name" => $user->name]);
+            session(["email" => $user->email]);
+            session(["user_id" => $user->id]);
+            session(["u_token" => md5($ip)]);
+            return "success";
         }
         else{
             return "fail";

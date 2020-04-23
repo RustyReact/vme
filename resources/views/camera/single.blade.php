@@ -53,9 +53,11 @@
             //     videoInput: '<deviceLabel>'
             // },
         }
+
         var api = new JitsiMeetExternalAPI(domain, options);
-        api.executeCommand('displayName', 'Happy');
-        api.executeCommand('subject', 'Local');
+        api.executeCommand('displayName', 'V-Meeting');
+        api.executeCommand('subject', 'Room - ');
+        api.executeCommand('toggleChat');
         // api.executeCommand('toggleChat');
 
         //api.addListener('readyToClose', () => {console.log('call hung up fron add Listener Event');});

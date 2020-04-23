@@ -153,7 +153,18 @@
 				contentType : false,
 				success : function(res){
 					if(res == "success"){
-
+						toastr.options = {
+							closeButton: !0,
+							progressBar: !0,
+							showMethod: "slideDown",
+							timeOut: 6e3
+						}, toastr.success("Success", "Please Login Now").css(({
+							width: "500px",
+							"max-width": "500px"
+						}));
+						setTimeout(function(){
+							location.href="/login";
+						},1000)
 					}
 					else{
 						toastr.options = {

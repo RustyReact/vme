@@ -146,7 +146,7 @@
 				contentType : false,
 				success : function(res){
 					if(res == "success"){
-
+						location.href="/dash";
 					}
 					else{
 						toastr.options = {
@@ -160,9 +160,9 @@
 						}));
 					}
 				},
-				// error : function(res){
-				// 	document.location.reload();	
-				// }
+				error : function(res){
+					document.location.reload();	
+				}
 			})
 		})
 	</script>
