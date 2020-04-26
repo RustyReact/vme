@@ -7,6 +7,12 @@
     .watermark{
         display : none !important;
     }
+    #jitsiConferenceFrame0 #react{
+        display : none !important;
+    }
+    #largeVideoContainer{
+        background-color : white !important;
+    }
 </style>
                     <!-- begin:: Content -->
                     <div class="kt-container  kt-container--fluid  kt-grid__item kt-grid__item--fluid">
@@ -36,11 +42,17 @@
             //     audioOutput: '<deviceLabel>',
             //     videoInput: '<deviceLabel>'
             // },
+            DEFAULT_BACKGROUND: '#474747',
+            chromeExtensionBanner: {
+                url: "https://chrome.google.com/webstore/detail/jitsi-meetings/kglhbbefdnlheedjiejgomgmfplipfeb",
+                chromeExtensionsInfo: [{"path": "jitsi-logo-48x48.png", "id": "kglhbbefdnlheedjiejgomgmfplipfeb"}]
+            },
         }
-
         var api = new JitsiMeetExternalAPI(domain, options);
+        
         api.executeCommand('displayName', '{{session("user_name")}}');
         api.executeCommand('subject', 'Room - {{session("user_name")}}');
+        // $("#jitsiConferenceFrame0").find("#react").css("display","none");
     </script>
 </body>
 </html>
